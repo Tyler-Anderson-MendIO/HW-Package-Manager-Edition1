@@ -68,3 +68,5 @@ jobs:
         MEND_URL: ${{ secrets.MEND_URL }}
         MEND_LOG_LEVEL: "DEBUG"
         MEND_APIKEY: ${{ secrets.API_KEY }}
+        MEND_PROJECTNAME: ${{ github.repository }}
+        MEND_PRODUCTNAME: "Tyler_Package_Manager-HW"
