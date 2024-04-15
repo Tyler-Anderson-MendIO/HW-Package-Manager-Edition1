@@ -54,7 +54,7 @@ jobs:
             mend dep --non-interactive --extended --update --scope "Tyler_Package_Manager-HW//${{ github.repository }}"
       env:
         MEND_USER_KEY: ${{ secrets.USER_KEY }}
-        MEND_EMAIL: ${{ secrets.MEND_EMAIL }}
+        MEND_EMAIL: ${{ secrets.USER_EMAIL }}
         MEND_URL: ${{ secrets.MEND_URL }}
         MEND_LOG_LEVEL: "DEBUG"
         MEND_APIKEY: ${{ secrets.API_KEY }}
@@ -64,7 +64,7 @@ jobs:
 
       env:
         MEND_USER_KEY: ${{ secrets.USER_KEY }}
-        MEND_EMAIL: ${{ secrets.MEND_EMAIL }}
+        MEND_EMAIL: ${{ secrets.USER_EMAIL }}
         MEND_URL: ${{ secrets.MEND_URL }}
         MEND_LOG_LEVEL: "DEBUG"
         MEND_APIKEY: ${{ secrets.API_KEY }}
