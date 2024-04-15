@@ -65,8 +65,8 @@ jobs:
       env:
         WS_USER_KEY: ${{ secrets.USER_KEY }}
         MEND_EMAIL: ${{ secrets.USER_EMAIL }}
-        WS_URL: ${{ secrets.MEND_URL }}
+        WS_WSS_URL: ${{ secrets.MEND_URL }}
         LOG_LEVEL: "DEBUG"
-        WS_APIKEY: ${{ secrets.API_KEY }}
+        WS_API_KEY: ${{ secrets.API_KEY }}
         WS_PROJECTNAME: "${{ github.repository }}_UA"
         WS_PRODUCTNAME: "Tyler_Package_Manager-HW"
