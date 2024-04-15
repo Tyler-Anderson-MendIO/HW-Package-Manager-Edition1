@@ -60,7 +60,9 @@ jobs:
         MEND_APIKEY: ${{ secrets.API_KEY }}
 
     - name: 'Running the UA'  
-      run: java -jar wss-unified-agent.jar
+      run: |
+            gradle.includedConfigurations >> wss-unified-agent.config
+            java -jar wss-unified-agent.jar
       env:
         WS_USERKEY: ${{ secrets.USER_KEY }}
         MEND_EMAIL: ${{ secrets.USER_EMAIL }}
