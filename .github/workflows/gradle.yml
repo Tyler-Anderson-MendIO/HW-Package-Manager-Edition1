@@ -65,7 +65,7 @@ jobs:
       env:
         WS_USER_KEY: ${{ secrets.USER_KEY }}
         MEND_EMAIL: ${{ secrets.USER_EMAIL }}
-        WS_WSS_URL: ${{ secrets.MEND_URL }}
+        WS_WSS_URL: "${{ secrets.MEND_URL }}/agent"
         LOG_LEVEL: "DEBUG"
         WS_API_KEY: ${{ secrets.API_KEY }}
         WS_PROJECTNAME: "${{ github.repository }}_UA"
