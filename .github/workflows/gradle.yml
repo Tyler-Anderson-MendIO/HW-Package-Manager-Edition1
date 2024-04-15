@@ -51,7 +51,7 @@ jobs:
 
     - name: "Running the CLI"
       run: |
-            mend dep --non-interactive --extended --update --scope "Tyler_Package_Manager-HW//${{ github.repository }}"_CLI
+            mend dep --non-interactive --extended --update --scope "Tyler_Package_Manager-HW//${{ github.repository }}_CLI"
       env:
         MEND_USER_KEY: ${{ secrets.USER_KEY }}
         MEND_EMAIL: ${{ secrets.USER_EMAIL }}
@@ -68,5 +68,5 @@ jobs:
         WS_URL: ${{ secrets.MEND_URL }}
         LOG_LEVEL: "DEBUG"
         WS_APIKEY: ${{ secrets.API_KEY }}
-        WS_PROJECTNAME: ${{ github.repository }}_UA
+        WS_PROJECTNAME: "${{ github.repository }}_UA"
         WS_PRODUCTNAME: "Tyler_Package_Manager-HW"
