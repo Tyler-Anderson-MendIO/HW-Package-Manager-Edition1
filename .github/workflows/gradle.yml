@@ -36,10 +36,10 @@ jobs:
         echo "Downloading the CLI"
         curl https://downloads.mend.io/cli/linux_amd64/mend -o /usr/local/bin/mend && chmod +x /usr/local/bin/mend
 
-    - name: "Building Maven"
-      run: |
-            echo "Building Maven"
-            mvn clean install
+    # - name: "Building Maven"
+    #   run: |
+    #         echo "Building Maven"
+    #         mvn clean install
 
     # Configure Gradle for optimal use in GiHub Actions, including caching of downloaded dependencies.
     # See: https://github.com/gradle/actions/blob/main/setup-gradle/README.md
