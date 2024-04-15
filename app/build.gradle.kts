@@ -12,7 +12,7 @@ plugins {
 
 repositories {
     // Use Maven Central for resolving dependencies.
-    google()
+    // google()
     mavenCentral()
 }
 
