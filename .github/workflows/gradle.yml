@@ -53,7 +53,7 @@ jobs:
       run: |
             mend dep --non-interactive --extended --update --scope "Tyler_Package_Manager-HW//${{ github.repository }}"
       env:
-        MEND_USER_KEY: ${{ secrets.WS_USERKEY }}
+        MEND_USER_KEY: ${{ secrets.USER_KEY }}
         MEND_EMAIL: ${{ secrets.MEND_EMAIL }}
         MEND_URL: ${{ secrets.MEND_URL }}
         MEND_LOG_LEVEL: "DEBUG"
@@ -63,7 +63,7 @@ jobs:
       run: java -jar wss-unified-agent.jar
 
       env:
-        MEND_USER_KEY: ${{ secrets.WS_USERKEY }}
+        MEND_USER_KEY: ${{ secrets.USER_KEY }}
         MEND_EMAIL: ${{ secrets.MEND_EMAIL }}
         MEND_URL: ${{ secrets.MEND_URL }}
         MEND_LOG_LEVEL: "DEBUG"
