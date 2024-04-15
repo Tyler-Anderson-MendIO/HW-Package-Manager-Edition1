@@ -61,7 +61,6 @@ jobs:
 
     - name: 'Running the UA'  
       run: java -jar wss-unified-agent.jar
-
       env:
         WS_USERKEY: ${{ secrets.USER_KEY }}
         MEND_EMAIL: ${{ secrets.USER_EMAIL }}
