@@ -61,7 +61,7 @@ jobs:
 
     - name: 'Running the UA'  
       run: |
-            gradle.includedConfigurations >> wss-unified-agent.config
+            "gradle.includedConfigurations=runtimeClasspath" >> wss-unified-agent.config
             java -jar wss-unified-agent.jar
       env:
         WS_USERKEY: ${{ secrets.USER_KEY }}
@@ -69,5 +69,5 @@ jobs:
         WS_WSS_URL: "${{ secrets.MEND_URL }}/agent"
         LOG_LEVEL: "DEBUG"
         WS_APIKEY: ${{ secrets.API_KEY }}
-        WS_PROJECTNAME: "${{ github.repository }}_UA_nogoogle"
+        WS_PROJECTNAME: "${{ github.repository }}_includConfigOnly"
         WS_PRODUCTNAME: "Tyler_Package_Manager-HW"
