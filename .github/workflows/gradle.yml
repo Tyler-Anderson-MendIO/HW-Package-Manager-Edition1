@@ -63,10 +63,10 @@ jobs:
       run: java -jar wss-unified-agent.jar
 
       env:
-        MEND_USER_KEY: ${{ secrets.USER_KEY }}
+        WS_USER_KEY: ${{ secrets.USER_KEY }}
         MEND_EMAIL: ${{ secrets.USER_EMAIL }}
-        MEND_URL: ${{ secrets.MEND_URL }}
-        MEND_LOG_LEVEL: "DEBUG"
-        MEND_APIKEY: ${{ secrets.API_KEY }}
+        WS_URL: ${{ secrets.MEND_URL }}
+        LOG_LEVEL: "DEBUG"
+        WS_APIKEY: ${{ secrets.API_KEY }}
         WS_PROJECTNAME: ${{ github.repository }}
         WS_PRODUCTNAME: "Tyler_Package_Manager-HW"
