@@ -58,16 +58,17 @@ jobs:
         MEND_URL: ${{ secrets.MEND_URL }}
         MEND_LOG_LEVEL: "DEBUG"
         MEND_APIKEY: ${{ secrets.API_KEY }}
+        MEND_SCA_REACHABILITY: "TRUE"
 
-    - name: 'Running the UA'  
-      run: |
-            echo "gradle.includedConfigurations=runtimeClasspath" >> wss-unified-agent.config
-            java -jar wss-unified-agent.jar
-      env:
-        WS_USERKEY: ${{ secrets.USER_KEY }}
-        MEND_EMAIL: ${{ secrets.USER_EMAIL }}
-        WS_WSS_URL: "${{ secrets.MEND_URL }}/agent"
-        LOG_LEVEL: "DEBUG"
-        WS_APIKEY: ${{ secrets.API_KEY }}
-        WS_PROJECTNAME: "${{ github.repository }}_includConfigOnly"
-        WS_PRODUCTNAME: "Tyler_Package_Manager-HW"
+    # - name: 'Running the UA'  
+    #   run: |
+    #         echo "gradle.includedConfigurations=runtimeClasspath" >> wss-unified-agent.config
+    #         java -jar wss-unified-agent.jar
+    #   env:
+    #     WS_USERKEY: ${{ secrets.USER_KEY }}
+    #     MEND_EMAIL: ${{ secrets.USER_EMAIL }}
+    #     WS_WSS_URL: "${{ secrets.MEND_URL }}/agent"
+    #     LOG_LEVEL: "DEBUG"
+    #     WS_APIKEY: ${{ secrets.API_KEY }}
+    #     WS_PROJECTNAME: "${{ github.repository }}_includConfigOnly"
+    #     WS_PRODUCTNAME: "Tyler_Package_Manager-HW"
